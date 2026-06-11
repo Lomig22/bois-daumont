@@ -1,0 +1,1348 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bois d'Aumont — Mobilier & Agencement Sur-Mesure · Aube (10)</title>
+<meta name="description" content="Artisan ébéniste dans l'Aube (10). Mobilier et agencement sur-mesure en bois massif : cuisines, bibliothèques, dressings, menuiserie intérieure. Devis gratuit, déplacement dans l'Aube.">
+
+<!-- ===== GOOGLE FONTS ===== -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ===== TOKENS / VARIABLES ===== */
+:root {
+  --moss:   #2D4A3E;
+  --ivory:  #F7F3ED;
+  --oak:    #C4935A;
+  --bark:   #1A2B24;
+  --linen:  #EDE8E0;
+  --lichen: #7A9B8A;
+
+  --font-display: 'Libre Baskerville', Georgia, serif;
+  --font-body: 'Outfit', system-ui, sans-serif;
+
+  --maxw: 1200px;
+  --header-h: 76px;
+}
+
+/* ===== RESET ===== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--header-h);
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  font-weight: 400;
+  color: var(--bark);
+  background: var(--ivory);
+  line-height: 1.65;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+ul { list-style: none; }
+button { font-family: inherit; cursor: pointer; border: none; background: none; }
+
+/* ===== HELPERS ===== */
+.container {
+  width: 100%;
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: 96px 0;
+  position: relative;
+}
+
+.eyebrow {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--oak);
+  display: block;
+  margin-bottom: 18px;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-style: italic;
+  color: var(--bark);
+  font-size: clamp(1.9rem, 4vw, 2.9rem);
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.section-sub {
+  font-weight: 300;
+  font-size: 1.05rem;
+  max-width: 640px;
+  color: var(--bark);
+  opacity: 0.78;
+  margin-bottom: 56px;
+}
+
+/* ===== SCROLL REVEAL ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.65s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              transform 0.65s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: opacity, transform;
+}
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== HEADER ===== */
+.header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  background: var(--moss);
+  height: var(--header-h);
+  display: flex;
+  align-items: center;
+  transition: box-shadow 0.3s ease;
+}
+.header.scrolled {
+  box-shadow: 0 2px 16px rgba(0,0,0,0.15);
+}
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  white-space: nowrap;
+}
+.logo .logo-bois {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #fff;
+  letter-spacing: 0.02em;
+}
+.logo .logo-sep {
+  width: 1px;
+  height: 22px;
+  background: var(--oak);
+  display: inline-block;
+}
+.logo .logo-aumont {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: #fff;
+  letter-spacing: 0.18em;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+}
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+.nav-links a {
+  color: #fff;
+  font-weight: 400;
+  font-size: 0.95rem;
+  transition: color 0.25s ease;
+  position: relative;
+}
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--oak);
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.badge-territoire {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.76rem;
+  font-weight: 500;
+  color: var(--lichen);
+  background: rgba(26,43,36,0.20);
+  padding: 5px 11px;
+  border-radius: 40px;
+  white-space: nowrap;
+}
+
+.btn-header {
+  border: 1px solid rgba(255,255,255,0.7);
+  color: #fff;
+  border-radius: 2px;
+  padding: 9px 18px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+.btn-header:hover {
+  background: #fff;
+  color: var(--moss);
+  border-color: #fff;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  width: 30px;
+  height: 24px;
+  justify-content: center;
+  z-index: 1100;
+}
+.hamburger span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: #fff;
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* Mobile overlay */
+.mobile-overlay {
+  position: fixed;
+  inset: 0;
+  background: var(--moss);
+  z-index: 1050;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-12px);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+.mobile-overlay.open {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+.mobile-overlay a {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.9rem;
+  color: #fff;
+  opacity: 0;
+  transform: translateY(14px);
+  transition: color 0.25s ease, opacity 0.4s ease, transform 0.4s ease;
+}
+.mobile-overlay.open a {
+  opacity: 1;
+  transform: translateY(0);
+}
+.mobile-overlay a:hover { color: var(--oak); }
+.mobile-overlay .badge-territoire { margin-top: 14px; font-size: 0.85rem; }
+
+/* ===== HERO ===== */
+.hero {
+  background: var(--moss);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  padding-top: calc(var(--header-h) + 90px);
+  padding-bottom: 110px;
+}
+.hero-rings {
+  position: absolute;
+  top: 50%;
+  right: -180px;
+  transform: translateY(-50%);
+  width: 640px;
+  height: 640px;
+  pointer-events: none;
+  z-index: 0;
+}
+.hero .container { position: relative; z-index: 2; }
+
+.hero-eyebrow {
+  color: var(--oak);
+  letter-spacing: 0.2em;
+}
+
+.hero h1 {
+  font-family: var(--font-display);
+  line-height: 1.12;
+  margin-bottom: 28px;
+  max-width: 760px;
+}
+.hero h1 .line1 {
+  display: block;
+  font-style: italic;
+  font-weight: 400;
+  color: #fff;
+  font-size: clamp(2.1rem, 6vw, 4rem);
+}
+.hero h1 .line2 {
+  display: block;
+  font-weight: 700;
+  color: var(--oak);
+  font-size: clamp(2.6rem, 8vw, 5.2rem);
+}
+
+.hero-sub {
+  font-weight: 300;
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  color: rgba(255,255,255,0.85);
+  max-width: 560px;
+  margin-bottom: 38px;
+}
+
+.hero-quote {
+  border-left: 2px solid rgba(196,147,90,0.5);
+  padding-left: 22px;
+  margin-bottom: 44px;
+  max-width: 480px;
+}
+.hero-quote p {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.3rem;
+  color: rgba(255,255,255,0.78);
+  line-height: 1.45;
+  position: relative;
+}
+.hero-quote .q-mark {
+  color: var(--oak);
+  font-style: normal;
+}
+.hero-quote cite {
+  display: block;
+  margin-top: 12px;
+  font-family: var(--font-body);
+  font-style: normal;
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.6);
+  letter-spacing: 0.04em;
+}
+
+.hero-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+/* ===== BUTTONS ===== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.98rem;
+  padding: 15px 28px;
+  border-radius: 3px;
+  transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
+}
+.btn:hover { transform: translateY(-2px); }
+.btn-oak {
+  background: var(--oak);
+  color: var(--bark);
+}
+.btn-oak:hover { box-shadow: 0 8px 22px rgba(196,147,90,0.3); }
+.btn-outline-light {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.8);
+  color: #fff;
+}
+.btn-outline-light:hover { background: rgba(255,255,255,0.1); }
+.btn-full { width: 100%; justify-content: center; }
+
+/* ===== SAVOIR-FAIRE ===== */
+.savoirfaire { background: var(--ivory); }
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 26px;
+}
+.metier-card {
+  background: var(--linen);
+  border-radius: 6px;
+  border-top: 3px solid var(--oak);
+  padding: 34px 32px;
+  transition: background 0.3s ease, border-top-color 0.3s ease;
+}
+.metier-card:hover {
+  background: var(--ivory);
+  border-top-color: #d8ab74;
+}
+.metier-card .card-icon {
+  margin-bottom: 20px;
+  color: var(--oak);
+}
+.metier-card h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: var(--bark);
+  margin-bottom: 14px;
+}
+.metier-card p {
+  font-weight: 300;
+  color: var(--bark);
+  opacity: 0.82;
+  margin-bottom: 18px;
+  font-size: 0.98rem;
+}
+.card-tag {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--lichen);
+}
+
+/* ===== PROCESSUS ===== */
+.processus {
+  background: var(--moss);
+  color: #fff;
+}
+.processus .section-title { color: #fff; }
+.processus .eyebrow { color: var(--oak); }
+.steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  position: relative;
+}
+.step {
+  position: relative;
+}
+.step:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 26px;
+  right: -18px;
+  width: 36px;
+  border-top: 2px dashed rgba(196,147,90,0.5);
+}
+.step .step-icon {
+  color: #fff;
+  margin-bottom: 18px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+}
+.step .step-num {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  color: var(--oak);
+  display: block;
+  margin-bottom: 8px;
+}
+.step h3 {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: #fff;
+  margin-bottom: 12px;
+}
+.step p {
+  font-weight: 300;
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.75);
+}
+
+/* ===== CREATIONS / GALERIE ===== */
+.creations { background: var(--ivory); }
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 220px;
+  gap: 22px;
+}
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  background: var(--linen);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.gallery-item.tall { grid-row: span 2; }
+.gallery-item .placeholder-name {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(1.1rem, 2vw, 1.7rem);
+  color: var(--oak);
+  opacity: 0.2;
+  padding: 0 18px;
+  line-height: 1.3;
+}
+.gallery-item .placeholder-label {
+  position: absolute;
+  bottom: 14px;
+  left: 16px;
+  right: 16px;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--lichen);
+  text-align: left;
+}
+.gallery-item .gallery-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(26,43,36,0.8);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+.gallery-item:hover .gallery-overlay,
+.gallery-item:focus-within .gallery-overlay { opacity: 1; }
+.gallery-overlay span { font-weight: 600; letter-spacing: 0.05em; }
+.gallery-overlay a {
+  font-size: 0.85rem;
+  color: var(--oak);
+  border-bottom: 1px solid var(--oak);
+  padding-bottom: 2px;
+}
+
+.gallery-cta {
+  margin-top: 44px;
+  text-align: center;
+}
+.gallery-cta a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  color: var(--oak);
+  font-size: 1.02rem;
+  transition: gap 0.25s ease;
+}
+.gallery-cta a:hover { gap: 14px; }
+
+/* ===== TEMOIGNAGES ===== */
+.temoignages { background: var(--linen); }
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+.testimonial {
+  background: var(--ivory);
+  border-radius: 6px;
+  border-left: 3px solid var(--oak);
+  padding: 32px 30px;
+}
+.testimonial .quote-mark {
+  color: var(--oak);
+  margin-bottom: 14px;
+}
+.testimonial p {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--bark);
+  line-height: 1.55;
+  margin-bottom: 22px;
+}
+.testimonial .t-author {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--lichen);
+}
+.testimonial .t-stars { letter-spacing: 0.06em; }
+
+/* ===== A PROPOS ===== */
+.apropos { background: var(--ivory); }
+.apropos-grid {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  gap: 56px;
+  align-items: start;
+}
+.apropos-text p {
+  font-weight: 300;
+  font-size: 1.05rem;
+  color: var(--bark);
+  opacity: 0.86;
+  margin-bottom: 20px;
+}
+.apropos-text p strong { font-weight: 500; opacity: 1; }
+.apropos-media {
+  position: relative;
+}
+.apropos-photo {
+  position: relative;
+  background: var(--linen);
+  border-radius: 6px;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 26px;
+}
+.apropos-photo .placeholder-name {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.3rem;
+  color: var(--oak);
+  opacity: 0.25;
+  z-index: 2;
+}
+.apropos-photo .photo-rings {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 420px; height: 420px;
+  z-index: 1;
+}
+.engagements li {
+  display: flex;
+  gap: 12px;
+  align-items: baseline;
+  font-weight: 400;
+  color: var(--bark);
+  margin-bottom: 12px;
+}
+.engagements li::before {
+  content: "—";
+  color: var(--oak);
+  font-weight: 700;
+}
+
+/* ===== CONTACT ===== */
+.contact {
+  background: var(--moss);
+  color: #fff;
+}
+.contact .section-title { color: #fff; }
+.contact .eyebrow { color: var(--oak); }
+.contact-sub {
+  color: rgba(255,255,255,0.75);
+  font-weight: 300;
+  margin-bottom: 52px;
+  font-size: 1.05rem;
+}
+.contact-grid {
+  display: grid;
+  grid-template-columns: 55% 45%;
+  gap: 56px;
+  align-items: start;
+}
+
+/* Form */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+.form-group { margin-bottom: 20px; }
+.form-group label {
+  display: block;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.8);
+  margin-bottom: 8px;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 4px;
+  padding: 12px 14px;
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 0.98rem;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+.form-group textarea { resize: vertical; min-height: 120px; }
+.form-group select option { color: var(--bark); }
+.form-group input::placeholder,
+.form-group textarea::placeholder { color: rgba(255,255,255,0.5); }
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--oak);
+  box-shadow: 0 0 0 3px rgba(196,147,90,0.2);
+}
+
+/* Coordonnées */
+.coords {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+.coords .coord-item {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  font-weight: 300;
+  color: rgba(255,255,255,0.88);
+}
+.coords .coord-item .ic { font-size: 1.1rem; line-height: 1.5; }
+.coords .coord-item a { color: var(--oak); }
+.coords .coord-item a:hover { text-decoration: underline; }
+.coords-note {
+  font-family: var(--font-display);
+  font-style: italic;
+  color: rgba(255,255,255,0.6);
+  font-size: 0.95rem;
+  border-top: 1px solid rgba(255,255,255,0.15);
+  padding-top: 20px;
+  margin-top: 6px;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background: var(--bark);
+  color: rgba(255,255,255,0.7);
+  text-align: center;
+  padding: 64px 0 40px;
+}
+.footer .logo { justify-content: center; margin-bottom: 16px; }
+.footer-tagline {
+  font-family: var(--font-display);
+  font-style: italic;
+  color: rgba(255,255,255,0.65);
+  margin-bottom: 8px;
+}
+.footer-dept {
+  font-size: 0.9rem;
+  color: var(--lichen);
+  margin-bottom: 22px;
+}
+.footer-ig {
+  display: inline-flex;
+  margin-bottom: 26px;
+  color: #fff;
+  transition: color 0.25s ease;
+}
+.footer-ig:hover { color: var(--oak); }
+.footer-sep {
+  width: 100%;
+  max-width: 280px;
+  height: 1px;
+  background: rgba(196,147,90,0.3);
+  margin: 0 auto 24px;
+}
+.footer-copy {
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 6px;
+}
+.footer-credit { font-size: 0.8rem; }
+.footer-credit a { color: var(--lichen); transition: color 0.25s ease; }
+.footer-credit a:hover { color: var(--oak); }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .nav-links { gap: 22px; }
+  .badge-territoire { display: none; }
+  .apropos-grid { grid-template-columns: 1fr; gap: 40px; }
+  .contact-grid { grid-template-columns: 1fr; gap: 44px; }
+}
+
+@media (max-width: 768px) {
+  .section { padding: 72px 0; }
+  .nav-links, .btn-header { display: none; }
+  .hamburger { display: flex; }
+  .cards-grid { grid-template-columns: 1fr; }
+  .steps { grid-template-columns: 1fr; gap: 38px; }
+  .step:not(:last-child)::after { display: none; }
+  .testimonials {
+    grid-template-columns: none;
+    grid-auto-flow: column;
+    grid-auto-columns: 84%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    padding-bottom: 12px;
+    -webkit-overflow-scrolling: touch;
+  }
+  .testimonial { scroll-snap-align: start; }
+  .gallery {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 200px;
+  }
+  .gallery-item.tall { grid-row: span 1; }
+  .form-row { grid-template-columns: 1fr; gap: 0; }
+}
+
+@media (max-width: 480px) {
+  .container { padding: 0 18px; }
+  .hero { padding-bottom: 80px; }
+  .hero-quote p { font-size: 1.15rem; }
+  .btn { width: 100%; justify-content: center; }
+}
+
+/* ===== REDUCED MOTION ===== */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms;
+    animation-iteration-count: 1;
+    transition-duration: 0.001ms;
+    scroll-behavior: auto;
+  }
+  .reveal { opacity: 1; transform: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="header" id="header">
+  <div class="container">
+    <a href="#hero" class="logo" aria-label="Bois d'Aumont — accueil">
+      <span class="logo-bois">BOIS</span>
+      <span class="logo-sep" aria-hidden="true"></span>
+      <span class="logo-aumont">D'AUMONT</span>
+    </a>
+
+    <nav class="nav" aria-label="Navigation principale">
+      <ul class="nav-links">
+        <li><a href="#savoirfaire">Savoir-faire</a></li>
+        <li><a href="#creations">Créations</a></li>
+        <li><a href="#apropos">À propos</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-right">
+      <span class="badge-territoire" aria-label="Territoire : Aube département 10">📍 Aube (10)</span>
+      <a href="#contact" class="btn-header">Prendre contact</a>
+      <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ===== MOBILE OVERLAY ===== -->
+<div class="mobile-overlay" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Menu mobile">
+  <a href="#savoirfaire" class="mobile-link">Savoir-faire</a>
+  <a href="#creations" class="mobile-link">Créations</a>
+  <a href="#apropos" class="mobile-link">À propos</a>
+  <a href="#contact" class="mobile-link">Contact</a>
+  <span class="badge-territoire">📍 Aube (10)</span>
+</div>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="hero">
+  <!-- Cernes de croissance SVG -->
+  <svg class="hero-rings" viewBox="0 0 640 640" aria-hidden="true" focusable="false">
+    <g fill="none" stroke="var(--oak)" stroke-width="0.5" opacity="0.06">
+      <circle cx="320" cy="320" r="18"/>
+      <circle cx="320" cy="320" r="36"/>
+      <circle cx="320" cy="320" r="54"/>
+      <circle cx="320" cy="320" r="72"/>
+      <circle cx="320" cy="320" r="90"/>
+      <circle cx="320" cy="320" r="108"/>
+      <circle cx="320" cy="320" r="126"/>
+      <circle cx="320" cy="320" r="144"/>
+      <circle cx="320" cy="320" r="162"/>
+      <circle cx="320" cy="320" r="180"/>
+      <circle cx="320" cy="320" r="198"/>
+      <circle cx="320" cy="320" r="216"/>
+      <circle cx="320" cy="320" r="234"/>
+      <circle cx="320" cy="320" r="252"/>
+      <circle cx="320" cy="320" r="270"/>
+      <circle cx="320" cy="320" r="288"/>
+      <circle cx="320" cy="320" r="300"/>
+    </g>
+  </svg>
+
+  <div class="container">
+    <span class="eyebrow hero-eyebrow reveal">Artisan ébéniste · Aube (10)</span>
+    <h1 class="reveal">
+      <span class="line1">Du bois à votre image,</span>
+      <span class="line2">fait à la main.</span>
+    </h1>
+    <p class="hero-sub reveal">Mobilier et agencement sur-mesure en bois massif. Artisan local dans l'Aube, je crée des pièces qui durent une vie.</p>
+
+    <blockquote class="hero-quote reveal">
+      <p><span class="q-mark">«&nbsp;</span>Chaque pièce commence par une conversation.<span class="q-mark">&nbsp;»</span></p>
+      <cite>— Bois d'Aumont</cite>
+    </blockquote>
+
+    <div class="hero-cta reveal">
+      <a href="#contact" class="btn btn-oak">Parler de mon projet</a>
+      <a href="#creations" class="btn btn-outline-light">Voir les créations</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SAVOIR-FAIRE ===== -->
+<section class="section savoirfaire" id="savoirfaire">
+  <div class="container">
+    <span class="eyebrow reveal">Savoir-faire</span>
+    <h2 class="section-title reveal">Ce que je fais avec le bois.</h2>
+    <p class="section-sub reveal">Chaque création est unique, conçue avec vous, fabriquée ici dans l'Aube.</p>
+
+    <div class="cards-grid">
+      <!-- Card 1 -->
+      <article class="metier-card reveal">
+        <div class="card-icon" aria-hidden="true">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 6v28M31 6v28M9 12h22M9 20h22"/><path d="M5 34h6M29 34h6"/>
+          </svg>
+        </div>
+        <h3>Mobilier sur-mesure</h3>
+        <p>Tables, bibliothèques, commodes, lits, bancs, consoles. Je travaille le bois massif — chêne, hêtre, frêne, noyer — pour créer des meubles qui s'adaptent exactement à votre espace et à votre usage.</p>
+        <span class="card-tag">Bois massif · Finition artisanale</span>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="metier-card reveal">
+        <div class="card-icon" aria-hidden="true">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="6" y="6" width="28" height="28" rx="1.5"/><path d="M20 6v28M6 20h28"/>
+          </svg>
+        </div>
+        <h3>Agencement intérieur</h3>
+        <p>Cuisines, dressings, placards sous pente, bibliothèques murales du sol au plafond. L'agencement sur-mesure, c'est utiliser chaque centimètre carré intelligemment, sans compromis sur le style.</p>
+        <span class="card-tag">Plans &amp; pose inclus</span>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="metier-card reveal">
+        <div class="card-icon" aria-hidden="true">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="9" y="5" width="22" height="30" rx="1.5"/><circle cx="26" cy="20" r="1.6" fill="currentColor" stroke="none"/>
+          </svg>
+        </div>
+        <h3>Menuiserie intérieure</h3>
+        <p>Portes intérieures, encadrements, boiseries, moulures, plinthes. Les détails qui font la différence entre un chantier ordinaire et une rénovation qui a du caractère.</p>
+        <span class="card-tag">Pose et finition</span>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="metier-card reveal">
+        <div class="card-icon" aria-hidden="true">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M24 8l8 8-14 14-8 2 2-8z"/><path d="M22 10l8 8"/><path d="M8 32h6"/>
+          </svg>
+        </div>
+        <h3>Restauration &amp; Relooking</h3>
+        <p>Un meuble ancien qui a perdu son éclat ? Je le ponce, le consolide, le teinte ou le laque pour lui redonner vie — ou une nouvelle identité.</p>
+        <span class="card-tag">Ancien &amp; contemporain</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROCESSUS ===== -->
+<section class="section processus" id="processus">
+  <div class="container">
+    <span class="eyebrow reveal">Comment ça se passe</span>
+    <h2 class="section-title reveal">Quatre étapes, une pièce unique.</h2>
+    <div class="steps" style="margin-top:48px;">
+      <!-- Step 1 -->
+      <div class="step reveal">
+        <div class="step-icon" aria-hidden="true">
+          <svg width="42" height="42" viewBox="0 0 42 42" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M8 9h26v18H18l-7 6v-6H8z"/>
+          </svg>
+        </div>
+        <span class="step-num">Étape 01</span>
+        <h3>On en parle</h3>
+        <p>On se retrouve chez vous ou en atelier. Je prends les mesures, on discute du bois, de la finition, de l'usage. Pas de jargon, pas de pression.</p>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="step reveal">
+        <div class="step-icon" aria-hidden="true">
+          <svg width="42" height="42" viewBox="0 0 42 42" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M11 5h14l6 6v26H11z"/><path d="M25 5v6h6"/><path d="M16 22h10M16 28h10"/>
+          </svg>
+        </div>
+        <span class="step-num">Étape 02</span>
+        <h3>Je vous fais un plan</h3>
+        <p>Croquis ou plan détaillé selon le projet. Devis clair, sans surprise. Je réponds à toutes vos questions avant de commencer.</p>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="step reveal">
+        <div class="step-icon" aria-hidden="true">
+          <svg width="42" height="42" viewBox="0 0 42 42" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M24 6l12 12-4 4-12-12z"/><path d="M20 14L7 27l-1 9 9-1 13-13"/>
+          </svg>
+        </div>
+        <span class="step-num">Étape 03</span>
+        <h3>Je fabrique en atelier</h3>
+        <p>Chaque pièce est travaillée à la main dans mon atelier de l'Aube. Le bois est sélectionné, préparé, assemblé, finitionné ici.</p>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="step reveal">
+        <div class="step-icon" aria-hidden="true">
+          <svg width="42" height="42" viewBox="0 0 42 42" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h20v14H5z"/><path d="M25 16h7l5 5v5h-12z"/><circle cx="12" cy="29" r="3"/><circle cx="30" cy="29" r="3"/>
+          </svg>
+        </div>
+        <span class="step-num">Étape 04</span>
+        <h3>Livraison &amp; pose</h3>
+        <p>Je livre et installe moi-même. On vérifie ensemble que tout est parfait. C'est mon nom qui est dessus.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CREATIONS ===== -->
+<section class="section creations" id="creations">
+  <div class="container">
+    <span class="eyebrow reveal">Créations</span>
+    <h2 class="section-title reveal" style="font-style:normal;font-weight:700;">Quelques pièces réalisées.</h2>
+    <p class="section-sub reveal">Aperçu de réalisations dans l'Aube — du salon à la cuisine, du sol au plafond.</p>
+
+    <div class="gallery">
+      <!-- Ligne 1 : grande gauche + 2 petites droite -->
+      <a class="gallery-item tall reveal" href="https://www.instagram.com/boisdaumont" target="_blank" rel="noopener" aria-label="Bibliothèque chêne massif à Troyes — voir sur Instagram">
+        <span class="placeholder-name">Bibliothèque<br>chêne massif</span>
+        <span class="placeholder-label">Bibliothèque chêne massif — Troyes</span>
+        <span class="gallery-overlay"><span>📷 @boisdaumont</span><span class="ig-link">Voir sur Instagram →</span></span>
+      </a>
+      <a class="gallery-item reveal" href="https://www.instagram.com/boisdaumont" target="_blank" rel="noopener" aria-label="Cuisine sur-mesure dans l'Aube — voir sur Instagram">
+        <span class="placeholder-name">Cuisine sur-mesure</span>
+        <span class="placeholder-label">Cuisine sur-mesure — Maison Aube</span>
+        <span class="gallery-overlay"><span>📷 @boisdaumont</span><span class="ig-link">Voir sur Instagram →</span></span>
+      </a>
+      <a class="gallery-item reveal" href="https://www.instagram.com/boisdaumont" target="_blank" rel="noopener" aria-label="Table à manger frêne à Bar-sur-Aube — voir sur Instagram">
+        <span class="placeholder-name">Table à manger frêne</span>
+        <span class="placeholder-label">Table à manger frêne — Bar-sur-Aube</span>
+        <span class="gallery-overlay"><span>📷 @boisdaumont</span><span class="ig-link">Voir sur Instagram →</span></span>
+      </a>
+
+      <!-- Ligne 2 : 2 petites gauche + grande droite (miroir) -->
+      <a class="gallery-item reveal" href="https://www.instagram.com/boisdaumont" target="_blank" rel="noopener" aria-label="Dressing sous pente à Nogent-sur-Seine — voir sur Instagram">
+        <span class="placeholder-name">Dressing sous pente</span>
+        <span class="placeholder-label">Dressing sous pente — Nogent-sur-Seine</span>
+        <span class="gallery-overlay"><span>📷 @boisdaumont</span><span class="ig-link">Voir sur Instagram →</span></span>
+      </a>
+      <a class="gallery-item reveal" href="https://www.instagram.com/boisdaumont" target="_blank" rel="noopener" aria-label="Commode noyer à Romilly-sur-Seine — voir sur Instagram">
+        <span class="placeholder-name">Commode noyer</span>
+        <span class="placeholder-label">Commode noyer — Romilly-sur-Seine</span>
+        <span class="gallery-overlay"><span>📷 @boisdaumont</span><span class="ig-link">Voir sur Instagram →</span></span>
+      </a>
+      <a class="gallery-item tall reveal" href="https://www.instagram.com/boisdaumont" target="_blank" rel="noopener" aria-label="Escalier bois massif à Troyes — voir sur Instagram">
+        <span class="placeholder-name">Escalier<br>bois massif</span>
+        <span class="placeholder-label">Escalier bois massif — Troyes</span>
+        <span class="gallery-overlay"><span>📷 @boisdaumont</span><span class="ig-link">Voir sur Instagram →</span></span>
+      </a>
+    </div>
+
+    <div class="gallery-cta reveal">
+      <a href="https://www.instagram.com/boisdaumont" target="_blank" rel="noopener">Voir toutes les réalisations sur Instagram →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TEMOIGNAGES ===== -->
+<section class="section temoignages" id="temoignages">
+  <div class="container">
+    <span class="eyebrow reveal">Ils en parlent</span>
+    <h2 class="section-title reveal">La confiance se construit pièce après pièce.</h2>
+    <div class="testimonials" style="margin-top:48px;">
+      <article class="testimonial reveal">
+        <div class="quote-mark" aria-hidden="true">
+          <svg width="34" height="28" viewBox="0 0 34 28" fill="currentColor"><path d="M0 28V16C0 7.2 5 1.6 14 0l2 5C11 6.4 9 9 8.5 13H15v15H0zm19 0V16C19 7.2 24 1.6 33 0l1 5c-5 1.4-7 4-7.5 8H34v15H19z"/></svg>
+        </div>
+        <p>«&nbsp;Un vrai artisan comme on n'en fait plus. Il a fabriqué notre bibliothèque sur mesure pour notre salon de Troyes. Solide, beau, exactement ce qu'on voulait.&nbsp;»</p>
+        <div class="t-author">Sophie M., Troyes · <span class="t-stars">⭐⭐⭐⭐⭐</span></div>
+      </article>
+
+      <article class="testimonial reveal">
+        <div class="quote-mark" aria-hidden="true">
+          <svg width="34" height="28" viewBox="0 0 34 28" fill="currentColor"><path d="M0 28V16C0 7.2 5 1.6 14 0l2 5C11 6.4 9 9 8.5 13H15v15H0zm19 0V16C19 7.2 24 1.6 33 0l1 5c-5 1.4-7 4-7.5 8H34v15H19z"/></svg>
+        </div>
+        <p>«&nbsp;Je lui ai confié la rénovation de notre cuisine et d'un dressing. Travail soigné, ponctuel, et surtout à l'écoute. On recommandera sans hésiter.&nbsp;»</p>
+        <div class="t-author">Laurent B., Bar-sur-Seine · <span class="t-stars">⭐⭐⭐⭐⭐</span></div>
+      </article>
+
+      <article class="testimonial reveal">
+        <div class="quote-mark" aria-hidden="true">
+          <svg width="34" height="28" viewBox="0 0 34 28" fill="currentColor"><path d="M0 28V16C0 7.2 5 1.6 14 0l2 5C11 6.4 9 9 8.5 13H15v15H0zm19 0V16C19 7.2 24 1.6 33 0l1 5c-5 1.4-7 4-7.5 8H34v15H19z"/></svg>
+        </div>
+        <p>«&nbsp;On cherchait quelqu'un dans l'Aube qui travaille vraiment le bois massif. La table qu'il nous a faite est une pièce de famille.&nbsp;»</p>
+        <div class="t-author">Marie &amp; Éric D., Nogent-sur-Seine · <span class="t-stars">⭐⭐⭐⭐⭐</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== A PROPOS ===== -->
+<section class="section apropos" id="apropos">
+  <div class="container">
+    <span class="eyebrow reveal">À propos</span>
+    <h2 class="section-title reveal" style="font-style:normal;font-weight:700;">Un artisan, un atelier, un département.</h2>
+
+    <div class="apropos-grid" style="margin-top:40px;">
+      <div class="apropos-text reveal">
+        <p>Je suis ébéniste dans l'Aube, et le bois, c'est mon métier depuis toujours. Dans mon atelier, je travaille à la main des essences que j'aime et que je connais : <strong>le chêne, le hêtre, le frêne, le noyer, le pin et le merisier</strong>. Chaque planche a son grain, son caractère — mon travail, c'est de le révéler.</p>
+        <p>Ce qui m'anime, c'est la relation avec mes clients. Un meuble sur-mesure, ça ne se commande pas sur catalogue : ça se discute, ça se dessine, ça se construit ensemble. J'interviens partout dans le département — <strong>Troyes, Bar-sur-Aube, Bar-sur-Seine, Romilly-sur-Seine, Nogent-sur-Seine, Arcis-sur-Aube</strong> — chez les particuliers comme aux côtés des architectes d'intérieur locaux.</p>
+        <p>Je ne fais pas de la quantité. Je fais des pièces qui durent, qu'on transmet, et dont je suis fier de signer le travail.</p>
+      </div>
+
+      <div class="apropos-media reveal">
+        <div class="apropos-photo">
+          <svg class="photo-rings" viewBox="0 0 420 420" aria-hidden="true" focusable="false">
+            <g fill="none" stroke="var(--oak)" stroke-width="0.5" opacity="0.12">
+              <circle cx="210" cy="210" r="18"/><circle cx="210" cy="210" r="36"/><circle cx="210" cy="210" r="54"/>
+              <circle cx="210" cy="210" r="72"/><circle cx="210" cy="210" r="90"/><circle cx="210" cy="210" r="108"/>
+              <circle cx="210" cy="210" r="126"/><circle cx="210" cy="210" r="144"/><circle cx="210" cy="210" r="162"/>
+              <circle cx="210" cy="210" r="180"/><circle cx="210" cy="210" r="198"/>
+            </g>
+          </svg>
+          <span class="placeholder-name">Atelier dans l'Aube</span>
+        </div>
+        <ul class="engagements">
+          <li>Bois sourcés en France</li>
+          <li>Fabrication 100&nbsp;% en atelier local</li>
+          <li>Livraison et pose dans l'Aube</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section class="section contact" id="contact">
+  <div class="container">
+    <span class="eyebrow reveal">Contact</span>
+    <h2 class="section-title reveal">Parlons de votre projet.</h2>
+    <p class="contact-sub reveal">Devis gratuit · Réponse sous 48h · Déplacement dans l'Aube</p>
+
+    <div class="contact-grid">
+      <!-- Formulaire -->
+      <form class="contact-form reveal" action="#" method="post" aria-label="Formulaire de demande de devis">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="prenom">Prénom</label>
+            <input type="text" id="prenom" name="prenom" placeholder="Votre prénom" autocomplete="given-name" required>
+          </div>
+          <div class="form-group">
+            <label for="nom">Nom</label>
+            <input type="text" id="nom" name="nom" placeholder="Votre nom" autocomplete="family-name" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="tel">Téléphone</label>
+            <input type="tel" id="tel" name="tel" placeholder="06 00 00 00 00" autocomplete="tel">
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="vous@exemple.fr" autocomplete="email" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="commune">Commune</label>
+          <input type="text" id="commune" name="commune" placeholder="Troyes, Bar-sur-Aube, Romilly…" required>
+        </div>
+
+        <div class="form-group">
+          <label for="projet-type">Type de projet</label>
+          <select id="projet-type" name="projet-type" required>
+            <option value="" disabled selected>Choisir…</option>
+            <option value="mobilier">Mobilier sur-mesure</option>
+            <option value="cuisine-dressing">Cuisine ou dressing</option>
+            <option value="menuiserie">Menuiserie intérieure</option>
+            <option value="restauration">Restauration de meuble</option>
+            <option value="autre">Autre</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Votre projet en quelques mots</label>
+          <textarea id="message" name="message" placeholder="Décrivez votre projet, vos dimensions, l'essence souhaitée…"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-oak btn-full" style="font-weight:700;">Envoyer mon projet</button>
+      </form>
+
+      <!-- Coordonnées -->
+      <div class="coords reveal">
+        <div class="coord-item"><span class="ic" aria-hidden="true">📍</span><span>Aube (10) — Troyes et alentours</span></div>
+        <div class="coord-item"><span class="ic" aria-hidden="true">📞</span><span><a href="tel:+33000000000">Téléphone à compléter</a></span></div>
+        <div class="coord-item"><span class="ic" aria-hidden="true">📱</span><span><a href="https://wa.me/33000000000" target="_blank" rel="noopener">WhatsApp à compléter</a></span></div>
+        <div class="coord-item"><span class="ic" aria-hidden="true">📸</span><span><a href="https://www.instagram.com/boisdaumont" target="_blank" rel="noopener">@boisdaumont</a></span></div>
+        <div class="coord-item"><span class="ic" aria-hidden="true">🕐</span><span>Lun–Ven 8h–18h · Sam matin sur RDV</span></div>
+        <p class="coords-note">Je me déplace gratuitement pour les projets situés dans le département de l'Aube.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container">
+    <a href="#hero" class="logo" aria-label="Bois d'Aumont — retour en haut">
+      <span class="logo-bois">BOIS</span>
+      <span class="logo-sep" aria-hidden="true"></span>
+      <span class="logo-aumont">D'AUMONT</span>
+    </a>
+    <p class="footer-tagline">Mobilier et agencement sur-mesure dans l'Aube</p>
+    <p class="footer-dept">Artisan local · Aube (10) · France 🇫🇷</p>
+
+    <a class="footer-ig" href="https://www.instagram.com/boisdaumont" target="_blank" rel="noopener" aria-label="Instagram @boisdaumont">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/>
+      </svg>
+    </a>
+
+    <div class="footer-sep" aria-hidden="true"></div>
+    <p class="footer-copy">© 2026 Bois d'Aumont — Tous droits réservés</p>
+    <p class="footer-credit">Site réalisé par <a href="https://paymentflow.fr" target="_blank" rel="noopener">Payment Flow</a></p>
+  </div>
+</footer>
+
+<!-- ===== SCRIPT ===== -->
+<script>
+'use strict';
+
+/* ===== HEADER SHADOW ON SCROLL ===== */
+function initHeaderScroll() {
+  var header = document.getElementById('header');
+  function onScroll() {
+    if (window.scrollY > 60) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+}
+
+/* ===== MOBILE MENU ===== */
+function initMobileMenu() {
+  var hamburger = document.getElementById('hamburger');
+  var overlay = document.getElementById('mobileMenu');
+  var links = overlay.querySelectorAll('.mobile-link');
+
+  function toggleMenu(open) {
+    var isOpen = (typeof open === 'boolean') ? open : !overlay.classList.contains('open');
+    overlay.classList.toggle('open', isOpen);
+    hamburger.classList.toggle('open', isOpen);
+    hamburger.setAttribute('aria-expanded', String(isOpen));
+    hamburger.setAttribute('aria-label', isOpen ? 'Fermer le menu' : 'Ouvrir le menu');
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+
+    if (isOpen) {
+      links.forEach(function (link, i) {
+        link.style.transitionDelay = (0.08 + i * 0.07) + 's';
+      });
+    } else {
+      links.forEach(function (link) { link.style.transitionDelay = '0s'; });
+    }
+  }
+
+  hamburger.addEventListener('click', function () { toggleMenu(); });
+  links.forEach(function (link) {
+    link.addEventListener('click', function () { toggleMenu(false); });
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && overlay.classList.contains('open')) { toggleMenu(false); }
+  });
+}
+
+/* ===== SCROLL REVEAL ===== */
+function initScrollReveal() {
+  var items = document.querySelectorAll('.reveal');
+  if (!('IntersectionObserver' in window)) {
+    items.forEach(function (el) { el.classList.add('revealed'); });
+    return;
+  }
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        var siblings = entry.target.parentElement.querySelectorAll('.reveal');
+        var index = Array.prototype.indexOf.call(siblings, entry.target);
+        entry.target.style.transitionDelay = (Math.max(index, 0) * 0.1) + 's';
+        entry.target.classList.add('revealed');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+  items.forEach(function (el) { observer.observe(el); });
+}
+
+/* ===== SCROLLSPY ===== */
+function initScrollSpy() {
+  var sections = document.querySelectorAll('section[id]');
+  var navLinks = document.querySelectorAll('.nav-links a');
+  if (!('IntersectionObserver' in window) || !navLinks.length) { return; }
+
+  function setActive(id) {
+    navLinks.forEach(function (link) {
+      var match = link.getAttribute('href') === '#' + id;
+      link.classList.toggle('active', match);
+    });
+  }
+
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) { setActive(entry.target.id); }
+    });
+  }, { threshold: 0.1, rootMargin: '-45% 0px -50% 0px' });
+
+  sections.forEach(function (section) { observer.observe(section); });
+}
+
+/* ===== INIT ===== */
+document.addEventListener('DOMContentLoaded', function () {
+  initHeaderScroll();
+  initMobileMenu();
+  initScrollReveal();
+  initScrollSpy();
+});
+</script>
+</body>
+</html>
