@@ -272,7 +272,13 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 /* ===== HERO ===== */
 .hero {
-  background: var(--moss);
+  background-color: var(--moss);
+  background-image:
+    linear-gradient(135deg, rgba(45,74,62,0.93) 0%, rgba(26,43,36,0.88) 100%),
+    url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=1600&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   color: #fff;
   position: relative;
   overflow: hidden;
